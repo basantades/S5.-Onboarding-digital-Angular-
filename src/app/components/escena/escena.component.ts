@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
+import { IStep } from '../../interfaces/istep';
+import { StepsService } from '../../service/steps.service';
 
 @Component({
   selector: 'app-escena',
@@ -7,5 +9,7 @@ import { Component } from '@angular/core';
   styleUrl: './escena.component.scss'
 })
 export class EscenaComponent {
+
+  @Input() steps: IStep[] = [];
 
 }

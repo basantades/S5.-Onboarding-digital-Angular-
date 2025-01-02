@@ -1,6 +1,6 @@
 export interface IStep {
     title: string,
-    descripción: string,
+    descripcion: string,
     img: string,
     bgcolor: string
 }

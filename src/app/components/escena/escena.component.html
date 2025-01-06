@@ -1,11 +1,14 @@
 
-escena carga:
-<div>
+<div class="contenedor">
     @for (step of steps; track step) {
-        <div>
+        <div class="card">
+        <div class="card-image" [style.background-color]="step.bgcolor">
+            <img src={{step.img}} alt="Imagen de la escena">
+        </div>
+        <div class="card-content">
         <h3>{{step.title}}</h3>
         <p>{{step.descripcion}}</p>
-        <br>
-    </div>
+        </div>
+        </div>
     }
 </div>

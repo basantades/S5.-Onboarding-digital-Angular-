@@ -57,12 +57,13 @@
     width: 10px;
     margin: 0 5px;
     background-color: #bbb;
-    border-radius: 50%;
+    border-radius: 5px;
     display: inline-block;
   }
   
   .dot.active {
     background-color: #333;
+    width: 20px;
   }
   
   .buttons {

@@ -1,14 +1,24 @@
-
 <div class="contenedor">
-    @for (step of steps; track step) {
-        <div class="card">
+    @for (step of steps; track step.id) {
+    <div [class.ocultar]="step.id != 1" class="card" id="card-{{step.id}}">
         <div class="card-image" [style.background-color]="step.bgcolor">
             <img src={{step.img}} alt="Imagen de la escena">
         </div>
         <div class="card-content">
         <h3>{{step.title}}</h3>
         <p>{{step.descripcion}}</p>
+        <div class="card-navigation">
+            <div>
+                <span [class.active]="step.id === 1" class="dot"></span>
+                <span [class.active]="step.id === 2" class="dot"></span>
+                <span [class.active]="step.id === 3" class="dot"></span>
+            </div>
+            <div class="buttons">
+                <button (click)="previousCard()" [class.ocultar]="step.id === 1" class="previous-button">&#8592;</button>
+                <button (click)="nextCard()" [class.ocultar]="step.id === 3" class="next-button">&#8594; </button>
+            </div>
+          </div>
         </div>
-        </div>
+    </div>
     }
 </div>

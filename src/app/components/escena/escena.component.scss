@@ -45,3 +45,71 @@
     margin: 0 0 20px 0;
     color: #666;
   }
+
+  .card-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  
+  .dot.active {
+    background-color: #333;
+  }
+  
+  .buttons {
+    display: flex;
+    gap: 20px;
+  }
+
+  .next-button {
+    background-color: #272727;
+    color: white;
+    border: 1px solid #272727;  
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .next-button:hover {
+    background-color: #939393;
+    border: 1px solid #939393;  
+
+  }
+
+  .previous-button {
+    background-color: #fff;
+    color: #272727;
+    border: 1px solid #272727;  
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .previous-button:hover {
+    color: white;
+    border: 1px solid #939393;  
+    background-color: #939393;
+  }
+
+  .ocultar {
+    display: none;
+  }

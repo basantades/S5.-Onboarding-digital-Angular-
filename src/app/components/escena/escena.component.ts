@@ -12,4 +12,27 @@ export class EscenaComponent {
 
   @Input() steps: IStep[] = [];
 
+  currentStepId = 1;
+
+  nextCard() {
+    const currentCard = document.getElementById(`card-${this.currentStepId}`);
+    const nextCard = document.getElementById(`card-${this.currentStepId + 1}`);
+
+    if (currentCard && nextCard) {
+      currentCard.classList.add('ocultar');
+      nextCard.classList.remove('ocultar');
+      this.currentStepId++;
+    }
+  }
+
+  previousCard() {
+    const currentCard = document.getElementById(`card-${this.currentStepId}`);
+    const previousCard = document.getElementById(`card-${this.currentStepId - 1}`);
+
+    if (currentCard && previousCard) {
+      currentCard.classList.add('ocultar');
+      previousCard.classList.remove('ocultar');
+      this.currentStepId--;
+    }
+  }
 }

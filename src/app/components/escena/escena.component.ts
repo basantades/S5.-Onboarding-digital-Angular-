@@ -17,22 +17,49 @@ export class EscenaComponent {
   nextCard() {
     const currentCard = document.getElementById(`card-${this.currentStep}`);
     const nextCard = document.getElementById(`card-${this.currentStep + 1}`);
+    const nextCard2 = document.getElementById(`card-${this.currentStep + 2}`);
+    const previousCard = document.getElementById(`card-${this.currentStep - 1}`);
 
     if (currentCard && nextCard) {
-      currentCard.classList.add('ocultar');
-      nextCard.classList.remove('ocultar');
+      currentCard.classList.remove('principal');
+      currentCard.classList.add('anterior');
+      nextCard.classList.remove('siguiente');
+      nextCard.classList.add('principal');
       this.currentStep++;
     }
+    if (nextCard2) {
+      nextCard2.classList.remove('siguiente2');
+      nextCard2.classList.add('siguiente');
+    }
+    if (previousCard) {
+      previousCard.classList.remove('anterior');
+      previousCard.classList.add('anterior2');
+    }
+
   }
 
   previousCard() {
     const currentCard = document.getElementById(`card-${this.currentStep}`);
+    const nextCard = document.getElementById(`card-${this.currentStep + 1}`);
     const previousCard = document.getElementById(`card-${this.currentStep - 1}`);
+    const previousCard2 = document.getElementById(`card-${this.currentStep - 2}`);
 
     if (currentCard && previousCard) {
-      currentCard.classList.add('ocultar');
-      previousCard.classList.remove('ocultar');
+      currentCard.classList.remove('principal');
+      currentCard.classList.add('siguiente');
+      previousCard.classList.remove('anterior');
+      previousCard.classList.add('principal');
       this.currentStep--;
     }
+    if (previousCard2) {
+      previousCard2.classList.remove('anterior2');
+      previousCard2.classList.add('anterior');
+    }
+    if (nextCard) {
+      nextCard.classList.remove('siguiente');
+      nextCard.classList.add('siguiente2');
+    }
   }
+  
+
 }

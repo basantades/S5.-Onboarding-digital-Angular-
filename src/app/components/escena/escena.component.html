@@ -13,9 +13,9 @@
         <p>{{step.descripcion}}</p>
         <div class="card-navigation">
             <div>
-                <span [class.active]="step.id === 1" class="dot"></span>
-                <span [class.active]="step.id === 2" class="dot"></span>
-                <span [class.active]="step.id === 3" class="dot"></span>
+                <span [class.active-dot]="step.id === 1" class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
             </div>
             <div class="buttons">
                 <button (click)="previousCard()" [class.ocultar]="step.id === 1" class="previous-button">&#8592;</button>

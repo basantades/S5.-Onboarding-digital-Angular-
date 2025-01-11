@@ -63,12 +63,42 @@
     background-color: #bbb;
     border-radius: 5px;
     display: inline-block;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
   }
   
-  .dot.active {
-    background-color: #333;
-    width: 20px;
+  @keyframes dot-animation {
+    from {
+      background-color: #bbb;
+      width: 10px;
+    }
+    to {
+      background-color: #333;
+      width: 30px;
+    }
   }
+  
+  @keyframes dot-animation-reverse {
+    from {
+      background-color: #333;
+      width: 30px;
+    }
+    to {
+      background-color: #bbb;
+      width: 10px;
+    }
+  }
+  
+  .active-dot {
+    animation-name: dot-animation;
+    animation-fill-mode: forwards;
+  }
+  
+  .dot:not(.active-dot) {
+    animation-name: dot-animation-reverse;
+    animation-fill-mode: forwards;
+  }
+
   
   .buttons {
     display: flex;
@@ -128,6 +158,7 @@
   }
   
   .siguiente {
+    pointer-events: none;
     position: absolute;
     top: 0;
     left: calc(50%);
@@ -138,6 +169,7 @@
   }
 
   .siguiente2 {
+    pointer-events: none;
     position: absolute;
     top: 0;
     left: calc(50% + 120px);
@@ -148,6 +180,7 @@
   }
 
   .anterior {
+    pointer-events: none;
     position: absolute;
     top: 0;
     left: calc(50% - 300px);
@@ -159,6 +192,7 @@
   }
 
   .anterior2 {
+    pointer-events: none;
     position: absolute;
     top: 0;
     left: calc(50% - 420px);

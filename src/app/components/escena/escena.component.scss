@@ -1,8 +1,7 @@
 .contenedor {
   position: relative;
   width: 100%;
-  height: calc(100vh - 160px);
-  overflow: hidden;
+  min-height: calc(100vh - 160px);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -10,6 +9,7 @@
 }
 
 .card {
+  display: grid;
     width: 300px;
     border-radius: 20px;
     overflow: hidden;
@@ -23,7 +23,8 @@
     justify-content: center;
     padding: 20px;
     text-align: center;
-    min-height: 40vh;
+    min-height: 210px;
+    height: 40vh;
   }
   
   .card-image img {
@@ -35,6 +36,9 @@
 
   .card-content {
     padding: 20px;
+    min-height: 220px;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
   }
   
   .card-content h3 {

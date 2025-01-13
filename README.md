@@ -1,59 +1,68 @@
-# OnBoarding
+# S5.-Onboarding Digital Angular
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.6.
+<p align="center">
+  <img src="public/assets/screenshot.jpg" alt="Captura de pantalla del proyecto" />
+</p>
 
-## Development server
+## 📄 Descripción
 
-To start a local development server, run:
+Este repositorio contiene una aplicación de **OnBoarding digital** desarrollada con **Angular**. La aplicación está diseñada para mostrar 3 cards utilizando una interfaz interactiva y dinámica.
 
+## ✨ Características
+
+- **Interfaz Intuitiva**: Proporciona una experiencia de usuario clara y amigable para el proceso de OnBoarding.
+- **Componentes Modulares**: Arquitectura basada en componentes para facilitar la reutilización y el mantenimiento del código.
+- **Navegación Fluida**: Permite moverse de manera dinámica entre diferentes pasos del OnBoarding.
+
+## 💻 Tecnologías Utilizadas
+
+- **Angular CLI** version 19.0.6.
+- **HTML5**
+- **TypeScript**
+- **SCSS** 
+
+## 📋 Requisitos
+
+- **Node.js** y **npm** instalados en tu sistema. Descárgalos desde [nodejs.org](https://nodejs.org/).
+- Angular CLI instalado globalmente:
+  ```bash
+  npm install -g @angular/cli
+  ```
+
+## 🛠️ Instalación
+
+**✔️ Paso 1:** Clona este repositorio en tu máquina local:
+```bash
+git clone https://github.com/basantades/S5.-Onboarding-digital-Angular-.git
+```
+
+**✔️ Paso 2:** Ingresa al directorio del proyecto:
+```bash
+cd S5.-Onboarding-digital-Angular-
+```
+
+**✔️ Paso 3:** Instala las dependencias necesarias:
+```bash
+npm install
+```
+
+## ▶️ Ejecución
+
+Para iniciar la aplicación en un entorno de desarrollo, ejecuta:
 ```bash
 ng serve
 ```
+Luego, abre tu navegador y navega a `http://localhost:4200/` para ver la aplicación en acción.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## 🤝 Contribuciones
 
-## Code scaffolding
+Si deseas colaborar en este proyecto o reportar algún problema, sigue estos pasos:
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+1. Crea un **issue** para reportar errores o sugerir mejoras.
+2. Envía un **pull request** con tus contribuciones.
+3. Asegúrate de seguir las **buenas prácticas** de desarrollo y de probar tus cambios antes de enviarlos.
 
-```bash
-ng generate component component-name
-```
+---
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Este README proporciona una guía básica para configurar, utilizar y contribuir al proyecto de OnBoarding Digital Angular. Asegúrate de consultar la documentación oficial de Angular para obtener información más detallada y actualizaciones.
 
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.

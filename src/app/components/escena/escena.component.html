@@ -4,7 +4,7 @@
     [class.principal]="step.id === 1"
     [class.siguiente]="step.id === 2"
     [class.siguiente2]="step.id === 3"
-    class="card" id="card-{{step.id}}">
+    class="card" id="card-{{step.id}}" (touchstart)="onTouchStart($event)" (touchend)="onTouchEnd($event)">
         <div class="card-image" [style.background-color]="step.bgcolor">
             <img src={{step.img}} alt="Imagen de la escena">
         </div>
@@ -25,4 +25,6 @@
         </div>
     </div>
     }
+    <div id="div-transparent-previous" class="ocultar" (click)="previousCard()"></div>
+    <div id="div-transparent-next" class="" (click)="nextCard()"></div>
 </div>

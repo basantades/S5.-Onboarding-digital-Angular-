@@ -1,22 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 
-html {
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    max-width: 100vw;
-    overflow-x: hidden;
+body {
     margin: 0;
     background-color: #f0f0f0;
-    font-family: 'Arial', sans-serif;
-
-}
-body {
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-h1 {
-    text-align: center;
-    margin: 30px;
 }

@@ -31,13 +31,11 @@ export class EscenaComponent {
       currentCard.classList.add('anterior');
     }
     if (nextCard) {
-      
       const nextCardDots = nextCard.querySelectorAll('.dot');
       nextCardDots[this.currentStep - 1].classList.add('active-dot');
-
       nextCard.classList.remove('siguiente');
       nextCard.classList.add('principal');
-    }
+    } 
     if (nextCard2) {
       nextCard2.classList.remove('siguiente2');
       nextCard2.classList.add('siguiente');
@@ -45,7 +43,9 @@ export class EscenaComponent {
     if (previousCard) {
       previousCard.classList.remove('anterior');
       previousCard.classList.add('anterior2');
+      document.getElementById('div-transparent-next')?.classList.add('ocultar');
     }
+    document.getElementById('div-transparent-previous')?.classList.remove('ocultar');
   }
 
   previousCard() {
@@ -67,7 +67,6 @@ export class EscenaComponent {
     if (previousCard) {
       const previousCardDots = previousCard.querySelectorAll('.dot');
       previousCardDots[this.currentStep - 1].classList.add('active-dot');
-
       previousCard.classList.remove('anterior');
       previousCard.classList.add('principal');
     }
@@ -78,7 +77,33 @@ export class EscenaComponent {
     if (nextCard) {
       nextCard.classList.remove('siguiente');
       nextCard.classList.add('siguiente2');
+      document.getElementById('div-transparent-previous')?.classList.add('ocultar');
     }
+    document.getElementById('div-transparent-next')?.classList.remove('ocultar');
   }
   
+
+
+
+  private touchStartX: number = 0;
+
+  onTouchStart(event: TouchEvent) {
+    this.touchStartX = event.changedTouches[0].clientX;
+  }
+
+  onTouchEnd(event: TouchEvent) {
+    const touchEndX = event.changedTouches[0].clientX;
+    const deltaX = this.touchStartX - touchEndX;
+    const nextCard = document.getElementById(`card-${this.currentStep + 1}`);
+    const previousCard = document.getElementById(`card-${this.currentStep - 1}`);
+
+    if (deltaX > 50 && nextCard) {
+      // Swipe left
+      this.nextCard();
+    } else if (deltaX < -50 && previousCard) {
+      // Swipe right
+      this.previousCard();
+    }
+  }
+
 }

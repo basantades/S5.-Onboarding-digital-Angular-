@@ -9,7 +9,6 @@
 }
 
 .card {
-  display: grid;
     width: 300px;
     border-radius: 20px;
     overflow: hidden;
@@ -204,4 +203,24 @@
     transition: 0.5s;
     transform: scale(0.6) perspective(40px) rotateY(0.5deg);
     filter: blur(8px);
+  }
+
+  #div-transparent-previous {
+    position: absolute;
+    width: 250px;
+    height: 100%;
+    right: calc(50% + 150px);
+    top: 0;
+    z-index: 9;
+    cursor: pointer;
+  }
+
+  #div-transparent-next {
+    position: absolute;
+    width: 250px;
+    height: 100%;
+    left: calc(50% + 150px);
+    top: 0;
+    z-index: 9;
+    cursor: pointer;
   }

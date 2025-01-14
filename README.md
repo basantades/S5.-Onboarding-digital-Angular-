@@ -13,6 +13,8 @@ Este repositorio contiene una aplicación de **OnBoarding digital** desarrollada
 - **Interfaz Intuitiva**: Proporciona una experiencia de usuario clara y amigable para el proceso de OnBoarding.
 - **Componentes Modulares**: Arquitectura basada en componentes para facilitar la reutilización y el mantenimiento del código.
 - **Navegación Fluida**: Permite moverse de manera dinámica entre diferentes pasos del OnBoarding.
+- **Diseño Responsivo**: Optimizado para dispositivos móviles, asegurando una experiencia consistente en pantallas de diferentes tamaños.
+- **Soporte para Gestos** Táctiles: Implementación de la función onTouch para una navegación más natural en dispositivos táctiles.
 
 ## 💻 Tecnologías Utilizadas
 
